@@ -1,0 +1,19 @@
+﻿@model IEnumerable<DummyBearKingdom.Models.Product>
+
+@{
+    ViewData["Title"] = "Dummy Bear Kingdom - Products";
+    Layout = "_Layout";
+}
+
+<h2>Products</h2>
+<p>A list of products...instructions here</p>
+
+<ul>
+    @foreach(var listProduct in Model)
+    {
+        <li>@Html.DisplayFor(listPrduct => listProduct.Name) | @Html.ActionLink("Details", "Details", new { id = listProduct.Id }) </li>
+    }
+
+</ul>
+<p>@Html.ActionLink("Add New Product", "Create")</p>
+<p>@Html.ActionLink("Go Back", "Index")</p>

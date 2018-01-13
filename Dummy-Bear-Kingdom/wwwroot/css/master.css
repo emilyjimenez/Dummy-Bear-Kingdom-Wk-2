@@ -1,0 +1,9 @@
+﻿.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: peachpuff;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 150px
+}

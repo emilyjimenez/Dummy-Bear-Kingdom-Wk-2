@@ -1,0 +1,13 @@
+﻿@model IEnumerable<DummyBearKingdom.Models.Product>
+
+@{
+
+    ViewData["Title"] = "Home";
+    Layout = "_Layout";
+
+}
+<h1>Welcome to the Dummy Bear Kingdom! <i>The home of all the magical bears</i></h1>
+
+        <h3>About</h3>
+<h3>@Html.ActionLink("Products", "Index", "Products")</h3>
+<h3>Notable Bears</h3>
