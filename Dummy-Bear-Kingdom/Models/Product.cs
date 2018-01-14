@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -11,6 +12,7 @@ namespace DummyBearKingdom.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "${0:0.00}")]  
         public int Cost { get; set; }
 
         public override bool Equals(System.Object otherProduct)
