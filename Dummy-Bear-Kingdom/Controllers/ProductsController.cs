@@ -38,6 +38,21 @@ namespace DummyBearKingdom.Controllers
             Product thisProduct = db.Products.FirstOrDefault(products => products.Id == id);
             return View();
         }
+
+        public IActionResult Delete(int id)
+        {
+            Product thisProduct = db.Products.FirstOrDefault(products => products.Id == id);
+            return View(thisProduct);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            Product thisProduct = db.Products.FirstOrDefault(products => products.Id == id);
+            db.Products.Remove(thisProduct);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
 
