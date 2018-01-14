@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DummyBearKingdom.Controllers
 {
-    public class BearsController : Controller
+    public class HomeController : Controller
     {
         // GET: /<controller>/
         public IActionResult Index()
