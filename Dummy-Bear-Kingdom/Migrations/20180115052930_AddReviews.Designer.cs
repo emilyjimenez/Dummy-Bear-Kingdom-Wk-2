@@ -8,9 +8,10 @@ using DummyBearKingdom.Models;
 namespace DummyBearKingdom.Migrations
 {
     [DbContext(typeof(DummyBearKingdomDbContext))]
-    partial class DummyBearKingdomDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180115052930_AddReviews")]
+    partial class AddReviews
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2");
