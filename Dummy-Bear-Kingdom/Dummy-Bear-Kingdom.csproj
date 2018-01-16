@@ -15,6 +15,8 @@
     <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\img\" />
     <Folder Include="Views\Bears\" />
+    <Folder Include="Views\Reviews\" />
+    <Folder Include="Models\Repositories\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dummy-Bear-Kingdom", "Dummy-Bear-Kingdom\Dummy-Bear-Kingdom.csproj", "{EBC0C36A-8AF8-4915-BD32-798170101D66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dummy-Bear-Kingdom.Tests", "Dummy-Bear-Kingdom.Tests\Dummy-Bear-Kingdom.Tests.csproj", "{9C77AAF0-E493-4521-BB36-1028A33F57B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{EBC0C36A-8AF8-4915-BD32-798170101D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBC0C36A-8AF8-4915-BD32-798170101D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBC0C36A-8AF8-4915-BD32-798170101D66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C77AAF0-E493-4521-BB36-1028A33F57B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C77AAF0-E493-4521-BB36-1028A33F57B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C77AAF0-E493-4521-BB36-1028A33F57B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C77AAF0-E493-4521-BB36-1028A33F57B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
