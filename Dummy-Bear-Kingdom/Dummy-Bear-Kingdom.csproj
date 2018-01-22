@@ -17,6 +17,7 @@
     <Folder Include="Views\Bears\" />
     <Folder Include="Views\Reviews\" />
     <Folder Include="Models\Repositories\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 
   <ItemGroup>
