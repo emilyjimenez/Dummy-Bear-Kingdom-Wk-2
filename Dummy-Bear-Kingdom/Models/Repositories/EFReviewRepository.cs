@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace DummyBearKingdom.Models
 {
     public class EFReviewRepository : IReviewRepository
@@ -15,7 +16,7 @@ namespace DummyBearKingdom.Models
 
         public Review Save(Review review)
         {
-            db.Products.Add(review);
+            db.Reviews.Add(review);
             db.SaveChanges();
             return review;
         }
@@ -29,7 +30,7 @@ namespace DummyBearKingdom.Models
 
         public void Remove(Review review)
         {
-            db.Products.Remove(review);
+            db.Reviews.Remove(review);
             db.SaveChanges();
         }
     }

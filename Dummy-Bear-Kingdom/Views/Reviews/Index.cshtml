@@ -1,4 +1,7 @@
-﻿@{
+﻿@model DummyBearKingdom.Models.Review
+
+
+@{
 
     ViewData["Title"] = "Home";
     Layout = "_Layout";
@@ -6,3 +9,12 @@
 }
 
 <h1>Review info here </h1>
+
+<ul>
+@foreach(var listReview in Model.Review)
+    {  
+        <li>Product: WILL GO HERE, by @Html.DisplayFor(modelReview => listReview.Author ) | DETAILS HERE? LINK OR CONTENT?</li>
+    }
+</ul>
+
+<p>@Html.ActionLink("Go Back", "Index", "Home")</p>
