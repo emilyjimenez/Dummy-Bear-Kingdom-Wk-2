@@ -1,20 +1,21 @@
-﻿@model DummyBearKingdom.Models.Review
-
+﻿@model IEnumerable<DummyBearKingdom.Models.Review>
 
 @{
 
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Reviews";
     Layout = "_Layout";
 
 }
 
-<h1>Review info here </h1>
+<h1>Reviews</h1>
+<h3>All reviews posted here. Or you can go to the products page to see reviews based on each product</h3>
 
 <ul>
-@foreach(var listReview in Model.Review)
-    {  
-        <li>Product: WILL GO HERE, by @Html.DisplayFor(modelReview => listReview.Author ) | DETAILS HERE? LINK OR CONTENT?</li>
+    @foreach(var r in Model)
+    {
+        <li>Product: WILL GO HERE, by @Html.DisplayFor(review => r.Author) | DETAILS HERE? LINK OR CONTENT?</li>
     }
+        
 </ul>
-
+<p>@Html.ActionLink("Add New Review", "Create")</p>
 <p>@Html.ActionLink("Go Back", "Index", "Home")</p>

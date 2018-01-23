@@ -7,3 +7,27 @@
 
 <h2>Details Here</h2>
 
+<h3>@Html.DisplayFor(model => model.Name)</h3>
+
+<p>@Html.DisplayFor(model => model.Description)</p>
+
+<p>Cost: @Html.DisplayFor(model => model.Cost)</p>
+
+<h2>Reviews</h2>
+
+
+@foreach(var review in Model.Reviews)
+{
+<ul>
+    <li>@Html.DisplayFor(model => model.Name) by @Html.DisplayFor(r => review.Author)</li>
+    <ul>
+        <li>@Html.DisplayFor(r => review.Content)</li>
+        <li>Rating: @Html.DisplayFor(r => review.Rating) out of 5 stars</li>
+    </ul>
+</ul>
+}
+
+<p>@Html.ActionLink("Go Back", "Index", "Products")</p>
+
+
+

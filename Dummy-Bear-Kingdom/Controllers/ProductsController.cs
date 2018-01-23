@@ -47,8 +47,11 @@ namespace DummyBearKingdom.Controllers
 
         public IActionResult Details(int id)
         {
-            Product thisProduct = productRepo.Products.FirstOrDefault(x => x.Id == id);
-            return View(thisProduct);
+            var model = productRepo.Products
+                                   .Include(p => p.Reviews)
+                                   .FirstOrDefault(products => products.Id == id);
+
+            return View(model);
         }
 
         public IActionResult Delete(int id)
