@@ -1,0 +1,22 @@
+﻿@model DummyBearKingdom.Models.Review
+
+@{
+    ViewData["Title"] = "Dummy Bear Kingdom - Add Review";
+    Layout = "_Layout";
+}
+
+<h2>Add a new product</h2>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Author)
+    @Html.TextBoxFor(model => model.Author)
+
+    @Html.LabelFor(model => model.Content)
+    @Html.TextBoxFor(model => model.Content)
+
+    @Html.LabelFor(model => model.Rating)
+    @Html.TextBoxFor(model => model.Rating)
+    <input type="submit" value="Add Review">
+}
+
+<p>@Html.ActionLink("Go Back", "Index", "Products")</p>

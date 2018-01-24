@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using DummyBearKingdom.Models;
+using DummyBearKingdom.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -38,19 +39,21 @@ namespace DummyBearKingdom.Controllers
             return View(reviewRepo.Reviews.ToList());
         }
 
-        public IActionResult Create()
+        public IActionResult Create(int id)
         {
-            return View();
+            ReviewOnProduct reviewonproduct = new ReviewOnProduct(id);
+            return View(reviewonproduct);
         }
 
-        //public IActionResult Create(Review review)
-        //{
+        [HttpPost]
+        public IActionResult Create(Review review)
+        {
            
 
-        //    ViewBag.Id = new SelectList(productRepo.Products.ToList(), "Id", "Name");
-        //    reviewRepo.Save(review);
+            //ViewBag.Id = new SelectList(productRepo.Products.ToList(), "Id", "Name");
+            reviewRepo.Save(review);
 
-        //    return RedirectToAction("Index");
-        //}
+            return RedirectToAction("Details", "Products", new { id = review.ProductId});
+        }
     }
 }
