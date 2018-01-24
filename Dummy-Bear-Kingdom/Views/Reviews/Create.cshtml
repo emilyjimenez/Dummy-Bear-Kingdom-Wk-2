@@ -1,4 +1,4 @@
-﻿@model DummyBearKingdom.Models.Review
+﻿@model DummyBearKingdom.ViewModels.ReviewOnProduct
 
 @{
     ViewData["Title"] = "Dummy Bear Kingdom - Add Review";
@@ -6,8 +6,13 @@
 }
 
 <h2>Add a new product</h2>
+@{ Model.ProductId = Model.CurrentProductId;}
+<p>@Model.CurrentProductId</p>
+
 @using (Html.BeginForm())
 {
+    @Html.TextBoxFor(model => model.ProductId)
+
     @Html.LabelFor(model => model.Author)
     @Html.TextBoxFor(model => model.Author)
 
@@ -18,5 +23,5 @@
     @Html.TextBoxFor(model => model.Rating)
     <input type="submit" value="Add Review">
 }
-
+akdfakdsjf
 <p>@Html.ActionLink("Go Back", "Index", "Products")</p>

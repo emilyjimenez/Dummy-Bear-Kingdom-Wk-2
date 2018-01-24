@@ -11,12 +11,12 @@
 <ul>
     @foreach(var listProduct in Model)
     {
-        <li>@Html.DisplayFor(modelProduct => listProduct.Name), @Html.DisplayFor(modelProduct => listProduct.Cost ) | 
-            @Html.ActionLink("Details", "Details", new { id = listProduct.Id }) | 
-            @Html.ActionLink("Delete", "Delete", new { id = listProduct.Id }) |
+        <li>@Html.DisplayFor(modelProduct => listProduct.Name), @Html.DisplayFor(modelProduct => @listProduct.Cost ) | 
+            @Html.ActionLink("Details", "Details", new { id = @listProduct.Id }) | 
+            @Html.ActionLink("Delete", "Delete", new { id = @listProduct.Id }) |
     </li>
     }
-
+    sdasdfasdfadfs
 </ul>
 <p>@Html.ActionLink("Add New Product", "Create")</p>
 <p>@Html.ActionLink("Go Back", "Index", "Home")</p>
