@@ -32,5 +32,10 @@ namespace DummyBearKingdom.Models
         {
             return this.Id.GetHashCode();
         }
+
+        public void GetAvgReviews()
+        {
+            
+        }
     }
 }
