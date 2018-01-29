@@ -33,6 +33,5 @@ namespace DummyBearKingdom.Models
             return this.ReviewId.GetHashCode();
         }
 
-        public 
     }
 }
