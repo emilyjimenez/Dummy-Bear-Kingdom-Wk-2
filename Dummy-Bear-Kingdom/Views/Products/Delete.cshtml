@@ -1,0 +1,15 @@
+﻿@model DummyBearKingdom.Models.Product
+
+@{
+    ViewData["Title"] = "Dummy Bear Kingdom - Products";
+    Layout = "_Layout";
+}
+
+<h2>Are you sure you want to delete?</h2>
+@using (Html.BeginForm())
+{
+   
+        <input type="submit" value="Delete" />
+}
+
+<p>@Html.ActionLink("Go Back", "Index")</p>

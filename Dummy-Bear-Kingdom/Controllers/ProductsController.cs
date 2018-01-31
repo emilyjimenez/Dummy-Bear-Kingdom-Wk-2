@@ -20,7 +20,7 @@ namespace DummyBearKingdom.Controllers
             {
                 this.productRepo = new EFProductRepository();
             }
-            else 
+            else
             {
                 this.productRepo = repo;
             }
@@ -28,7 +28,7 @@ namespace DummyBearKingdom.Controllers
 
         public IActionResult Index()
         {
-            
+
             return View(productRepo.Products.ToList());
         }
 
@@ -41,7 +41,7 @@ namespace DummyBearKingdom.Controllers
         public IActionResult Create(Product product)
         {
             productRepo.Save(product);
-           
+
             return RedirectToAction("Index");
         }
 
@@ -70,4 +70,3 @@ namespace DummyBearKingdom.Controllers
 
     }
 }
-
