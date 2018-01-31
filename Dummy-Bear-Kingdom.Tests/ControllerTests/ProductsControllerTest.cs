@@ -144,8 +144,8 @@ namespace DummyBearKingdom.Tests.ControllerTests
             };
 
             //Act
-            controller.Create(testProduct, null);
-            controller.Create(testProduct2, null);
+            controller.Create(testProduct);
+            controller.Create(testProduct2);
 
             var collection = (controller.Index() as ViewResult).ViewData.Model as List<Product>;
             controller.DeleteConfirmed(collection[0].Id);
